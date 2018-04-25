@@ -1,0 +1,11 @@
+#!/bin/bash
+
+echo "Uninstalling scripts..."
+set_time_auto
+rm /usr/local/bin/set_time_past
+rm /usr/local/bin/set_time_auto
+
+echo "Uninstalling Sketch..."
+sudo rm -rf /Applications/Sketch.app/
+
+echo "Finished uninstalling!"

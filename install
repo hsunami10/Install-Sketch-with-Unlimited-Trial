@@ -1,0 +1,32 @@
+#!/bin/bash
+
+echo "Installing Sketch and required time scripts..."
+
+touch /usr/local/bin/set_time_past
+touch /usr/local/bin/set_time_auto
+
+echo "Installing time scripts..."
+chmod +x /usr/local/bin/set_time_past
+echo "#!/bin/bash" >> /usr/local/bin/set_time_past
+echo "sudo date 0424010018" >> /usr/local/bin/set_time_past
+
+chmod +x /usr/local/bin/set_time_auto
+echo "#!/bin/bash" >> /usr/local/bin/set_time_auto
+echo "sudo ntpdate -u time.apple.com" >> /usr/local/bin/set_time_auto
+
+echo "Finished installing time scripts!"
+echo "Installing Sketch..."
+
+# Get current working directory
+DIR=$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )
+cd "${DIR}"
+
+unzip sketch-49.3-51167.zip
+mkdir /Applications/Sketch.app/
+mv -v Sketch.app/* /Applications/Sketch.app/
+rm -rf Sketch.app/
+
+echo "Finished installing Sketch!"
+echo "Setting time and launching Sketch..."
+set_time_past
+open /Applications/Sketch.app/
