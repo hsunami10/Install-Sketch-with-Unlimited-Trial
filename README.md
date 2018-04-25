@@ -1,7 +1,9 @@
-Double click on the install executable to install Sketch with the proper scripts.
-Double click on the uninstall executable to uninstalling Sketch and scripts.
+# Install Sketch v49.3 with Unlimited Trial
 
-# IMPORTANT
+##### Double click on the install executable to install Sketch with the proper scripts.
+##### Double click on the uninstall executable to uninstalling Sketch and scripts.
+
+# Remember:
 ## Run set_time_past every time before you start up Sketch
 ## Run set_time_auto every time you stop using Sketch, to reset your time back to normal
 
